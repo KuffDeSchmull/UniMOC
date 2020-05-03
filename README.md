@@ -5,13 +5,13 @@ should work on Windows, Mac and Linux as the project is build with Electron, Nod
 
 run 'npm imtsall' to install required dependencies
 
-## npm install 
+### npm install 
 
 Start programm with:
 
 ### `npm run electron-dev`
 
-
+If you just run npm start, just the react part will run, not the electron GUI and API
 
 ----------------------------------
 
