@@ -16,16 +16,143 @@ code {
 .tab:hover{
     
     cursor:pointer;
-    background-color: #383c45;
-    color: #dddddd;
+    background-color: rgb(182,182,182);/*#383c45*/
+    color: #212121;
 }
 .active{
     /*border-radius: 0.5ex;*/
     border-width: .2ex;
     border-left-style: solid;
     border-right-style: solid;
-    border-color: #383c45;
+    border-color: rgb(189,189,189);
     box-sizing: border-box;
-    background-color: #4a4e56;
+    background-color: rgb(199,199,199);/*#4a4e56*/
+    color:#212121;
+}
+
+.nav-views-view.active{height: 100vh !important;
+    box-sizing: border-box;
+    /* margin-bottom: 7em; */
+    width: 100vw;
+    padding-bottom: 7em;
+    /* z-index: -2;*/
+}
+
+
+
+
+
+
+.sidebar:hover {
+    transform: translate(14.5em);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.sidebar {
+    transition-property: all;
+    transition-duration: 0.7s;
+
+
+    overflow-y: hidden;
+    position: absolute;
+    left: -14.5em;
+    width: 15em;
+    height: 100vh;
+    box-sizing: border-box;
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+    z-index: 3;
+}
+
+.sidebarInnerShell {
+    position: static;
+    width: 14.5em;
+    height: 100%;
+    background-color: #383c45;
+    margin-right: 0;
+    float: left;
+}
+
+.pullyShell {
+    margin-right: 0 !important;
+    position: static;
+    width: 15em;
+    height: 100%;
+    background-color: rgba(180, 180, 200, 0.2);
+    z-index: 3;
+}
+.sidebar:hover .pullyShell {
+
+    background-color: rgba(70, 70, 80, 0.9);
+    
+}
+
+.pullyContainer {
+    width: 0.5em;
+    height: 100%;
+    background-color: ;
+    margin-left: 14.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pully {
+    width: 0.5em;
+    height: 4em;
+    background-color: #383c45;
+}
+webview.visible{
+    height: 100vh;
+    padding-bottom: 3em;
+    box-sizing: border-box;
+    z-index: 0;
+}
+.etabs-tab{
+    height: 2em;
+    background-color: #40434a;
+    box-sizing: border-box;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: #4a4e56;
     color:#dddddd;
+    line-height: 2em;
+    padding-left: 1em;
+    font-family: roboto;
+    margin-top: .1em;
+}
+.etabs-tabgroup{
+    margin-top: 1em;
+}
+.etabs-buttons{
+    margin-top: 1em;
+    text-align: center;
+}
+.etabs-tab-buttons{
+    float: right;
+    text-align: right;
+    margin-right: 0.5em; 
+    
+}
+.etabs-tab-button-close{
+  background-color: #5d626c;
+    color:aliceblue;
+    border: none;
+    border-radius: .2em;
+    
+}
+.etabs-tab-button-new{
+    margin-top: .7em;
+    box-sizing: content-box;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: .5em;
+    background-color: rgba(50,217,121,0.8);
+    color:aliceblue;
+    font-size: 2em;
+    
+    font-family: roboto;
+    
+    
 }

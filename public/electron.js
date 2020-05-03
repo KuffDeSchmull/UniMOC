@@ -9,7 +9,7 @@ const isDev = require('electron-is-dev');
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 900, height: 680,  'minHeight': 500,
+  mainWindow = new BrowserWindow({fullscreenWindowTitle:true,opacity:0.98,title : "UniMOC",width: 900, height: 680,  'minHeight': 500,
   'minWidth': 600,
     webPreferences: {
       nodeIntegration: true,

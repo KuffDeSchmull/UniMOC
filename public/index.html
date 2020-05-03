@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="./node_modules/electron-tabs/electron-tabs.css">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -28,7 +29,29 @@
 
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+   
+  
+                        <div class = "sidebar">
+            <div class="sidebarInnerShell" style=""> 
+                <div style="margin: auto; text-align: center; margin-top: 1em;">
+                <h3 style="color: #dddd; text-align: center; font-family: roboto;">Offene Seiten</h3>
+                    </div>
+                           <div class="etabs-tabgroup">
+  <div class="etabs-tabs"></div>
+  <div class="etabs-buttons"></div>
+</div>
+            </div> 
+            <div class="pullyShell">
+                <div class = "pullyContainer"> 
+                    <div class="pully"></div>
+                </div>
+            </div> 
+        </div> 
+
+<div class="etabs-views"></div>
     <div id="root"></div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -42,16 +65,27 @@
 
 
 
-    <div class="tabs" style="box-shadow: 0 -3px 20px rgba(0,0,0,0.15), 0 -4px 6px rgba(0,0,0,0.19); width:100vw; height:5em; background-color:rgba(255,255,255,0.75); position:fixed; bottom:0;">
+    <div class="tabs" style="box-shadow: 0 -3px 20px rgba(0,0,0,0.15), 0 -4px 6px rgba(0,0,0,0.19); width:100vw; height:3em; background-color:rgba(231,231,235,1); position:fixed; bottom:0;">
         <div class="nav-wrap" style="width:100vw; display:flex;flex-direction: row;">
-            <div class="tab" style="height:5em; background-color:; width:20%; text-align:center; line-height:5em;">Manager</div>
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center; line-height:3em;">Manager</div>
 
-            <div class="tab" style="height:5em; background-color:; width:20%; text-align:center; line-height:5em;">Organizer</div>
-            <div class="tab active" style="height:5em; background-color:; width:20%; text-align:center; line-height:5em; ">Cluster</div>
-            <div class="tab" style="height:5em; background-color:; width:20%; text-align:center;  line-height:5em;">Studies</div>
-            <div class="tab" style="height:5em; background-color:; width:20%; text-align:center;  line-height:5em;">Bib</div>
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center; line-height:3em;">Organizer</div>
+            <div class="tab active" style="height:3em; background-color:; width:20%; text-align:center; line-height:3em; ">Cluster</div>
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center;  line-height:3em;">Studies</div>
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center;  line-height:3em;">Bib</div>
         </div>
     </div>
+    
+    
+    
+    
+    
+           <script>
+            // You can also require other files to run in this process
+        require('./src/renderer.js')
+               
+               //const enav = new (require('electron-navigation'))();
+        </script>
 </body>
 
 </html>
