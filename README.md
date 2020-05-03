@@ -1,3 +1,20 @@
+# Start Programm 
+
+should work on Windows, Mac and Linux as the project is build with Electron, NodeJS and React
+
+
+run 'npm imtsall' to install required dependencies
+
+## npm install 
+
+Start programm with:
+
+### `npm run electron-dev`
+
+
+
+----------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

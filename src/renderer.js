@@ -40,6 +40,11 @@ let tabOnline = tabGroup.addTab({
     src: "https://online.rwth-aachen.de",
     visible: true
 });
+let tabVideo = tabGroup.addTab({
+    title: "Video AG",
+    src: "https://video.fsmpi.rwth-aachen.de",
+    visible: true
+});
 // 4. Add a new tab that contains a local HTML file
 /*let tab2 = tabGroup.addTab({
     title: "Cluster",
@@ -51,3 +56,5 @@ let tabOnline = tabGroup.addTab({
         nodeintegration: true
     }
 });*/
+
+

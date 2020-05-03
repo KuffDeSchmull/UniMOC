@@ -16,17 +16,20 @@ code {
 .tab:hover{
     
     cursor:pointer;
-    background-color: rgb(182,182,182);/*#383c45*/
+    background-color: rgb(209,209,209);/*rgb(182,182,182);*//*#383c45*/
     color: #212121;
+     border-radius: .5em;
 }
 .active{
     /*border-radius: 0.5ex;*/
     border-width: .2ex;
     border-left-style: solid;
     border-right-style: solid;
-    border-color: rgb(189,189,189);
+    border-radius: .5em;
+    box-shadow: 0 -3px 20px rgba(0,0,0,0.05), 0 -4px 6px rgba(0,0,0,0.10);
+    border-color: rgb(228,228,228);
     box-sizing: border-box;
-    background-color: rgb(199,199,199);/*#4a4e56*/
+    background-color: rgb(248,248,248);/*rgb(199,199,199);*//*#4a4e56*/
     color:#212121;
 }
 
