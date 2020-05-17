@@ -84,9 +84,13 @@ code {
     height: 100%;
     background-color: rgba(180, 180, 200, 0.2);
     z-index: 3;
+        transition-property: all;
+    transition-duration: 1.7s;
 }
 .sidebar:hover .pullyShell {
 
+        transition-property: all;
+    transition-duration: 0.7s;
     background-color: rgba(70, 70, 80, 0.9);
     
 }
@@ -111,6 +115,7 @@ webview.visible{
     padding-bottom: 3em;
     box-sizing: border-box;
     z-index: 0;
+    
 }
 .etabs-tab{
     height: 2em;
@@ -159,3 +164,4 @@ webview.visible{
     
     
 }
+.letThrough{pointer-events:none;}

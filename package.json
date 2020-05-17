@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "electron-is-dev": "^1.2.0",
     "electron-tabs": "^0.15.0",
+    "jquery": "^3.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"

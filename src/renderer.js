@@ -4,6 +4,7 @@
 const TabGroup = require("electron-tabs");
 
 // 2. Define the instance of the tab group (container)
+
 let tabGroup = new TabGroup({
     // If you want a new button that appends a new tab, include:
     newTab: {
@@ -16,12 +17,14 @@ let tabGroup = new TabGroup({
         //webviewAttributes: {
         //    nodeintegration: true
         //}
-            src: "http://localhost:3000/cluster.html",
+        
+            src: "about:blank",
     visible: true,
     // If the page needs to access Node.js modules, be sure to
     // enable the nodeintegration
     webviewAttributes: {
-        nodeintegration: true
+        nodeintegration: true,
+        allowpopups:true
     }
         
         
@@ -33,7 +36,11 @@ let tabGroup = new TabGroup({
 let tab1 = tabGroup.addTab({
     title: "Moodle",
     src: "https://moodle.rwth-aachen.de",
-    visible: true
+    visible: true,
+        webviewAttributes: {
+        nodeintegration: true,
+        allowpopups:true
+    }
 });
 let tabOnline = tabGroup.addTab({
     title: "RWTH-Online",
@@ -44,6 +51,12 @@ let tabVideo = tabGroup.addTab({
     title: "Video AG",
     src: "https://video.fsmpi.rwth-aachen.de",
     visible: true
+});
+let tabTest = tabGroup.addTab({
+    title: "TestG",
+    src: "about:blank",
+    visible: true,
+    blank:true
 });
 // 4. Add a new tab that contains a local HTML file
 /*let tab2 = tabGroup.addTab({
@@ -56,5 +69,9 @@ let tabVideo = tabGroup.addTab({
         nodeintegration: true
     }
 });*/
-
+function letThrough (){
+    console.log("hello");
+}
+tabGroup.eachTab(letThrough);
+module.exports.tabGroup = tabGroup;
 
