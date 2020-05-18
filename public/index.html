@@ -123,15 +123,16 @@
 }
 tabs.tabGroup.eachTab(letThrough);*/
                
-               document.getElementById("moodle").onclick = function() {myFunction("https://moodle.rwth-aachen.de")};
-               document.getElementById("rwthonline").onclick = function() {myFunction("https://online.rwth-aachen.de")};
-               document.getElementById("video").onclick = function() {myFunction("https://video.fsmpi.rwth-aachen.de")};
+               document.getElementById("moodle").onclick = function() {myFunction("https://moodle.rwth-aachen.de","Moodle")};
+               document.getElementById("rwthonline").onclick = function() {myFunction("https://online.rwth-aachen.de","RWTH Online")};
+               document.getElementById("video").onclick = function() {myFunction("https://video.fsmpi.rwth-aachen.de","RWTH Video")};
 
-function myFunction(link) {
+function myFunction(link,name) {
   console.log("moo");
     //tabs.tabGroup.getActiveTab().webviewAttributes.src="https://moodle.rwth-aachen.de";
-     tabs.tabGroup.getActiveTab().webview.setAttribute("src", link);
+    tabs.tabGroup.getActiveTab().webview.setAttribute("src", link);
     tabs.tabGroup.getActiveTab().webview.classList.remove("letThrough");
+    tabs.tabGroup.getActiveTab().setTitle(name);
 }
 
 
