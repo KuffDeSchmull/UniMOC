@@ -115,6 +115,7 @@ webview.visible{
     padding-bottom: 3em;
     box-sizing: border-box;
     z-index: 0;
+    background-color: white;
     
 }
 .etabs-tab{
@@ -164,4 +165,4 @@ webview.visible{
     
     
 }
-.letThrough{pointer-events:none;}
+.letThrough{pointer-events:none;background-color: rgba(0,0,0,0) !important;}

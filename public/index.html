@@ -54,17 +54,17 @@
           <div class="grid-container" style="width:80%;margin:auto; display:grid; grid-template-columns: repeat(3, 1fr); margin-top:5em;">
     <div style="height:7em;">
       <div style="height:7em; padding:1em;" >
-        <div id="demo" style="height:5em; width:5em; margin:auto; background-color:rgba(200,24,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/moodle.png); background-repeat: no-repeat;background-size: cover;"></div>
+        <div id="moodle" style="height:5em; width:5em; margin:auto; background-color:rgba(200,24,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/moodle.png); background-repeat: no-repeat;background-size: cover;"></div>
       </div>
     </div>
     <div style="height:7em; ">
       <div style="height:7em; padding:1em;" >
-        <div style="height:5em; width:5em; margin:auto; background-color:rgba(100,24,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/online.png); background-repeat: no-repeat;background-size: cover;"></div>
+        <div id="rwthonline" style="height:5em; width:5em; margin:auto; background-color:rgba(100,24,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/online.png); background-repeat: no-repeat;background-size: cover;"></div>
       </div>
     </div>
     <div style="height:7em; ">
       <div style="height:7em; padding:1em;" >
-        <div  style="height:5em; width:5em; margin:auto; background-color:rgba(200,294,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08);"></div>
+        <div id="video" style="height:5em; width:5em; margin:auto; background-color:rgba(200,294,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08);background-image: url(assets/video.png);background-repeat: no-repeat;background-size: cover; "></div>
       </div>
     </div>
     <div style="height:7em; ">
@@ -113,21 +113,28 @@
     
     
     <script>window.$ = window.jQuery = require('jquery');</script>
-    
+    <script></script>
            <script>
             // You can also require other files to run in this process
-        require('./src/renderer.js')
-               document.getElementById("demo").onclick = function() {myFunction()};
-
-function myFunction() {
-  console.log("demo");
+       var tabs = require('./src/renderer.js')
+       /*function letThrough (){
+    console.log("hello2");
+           let activeTab = tabs.tabGroup.getActiveTab();
 }
-               $('.visible').each(function () {
-    if (this.src=="about:blank") {
-        //if it has source
-        this.css("pointer-events", "none")
-    }
-});
+tabs.tabGroup.eachTab(letThrough);*/
+               
+               document.getElementById("moodle").onclick = function() {myFunction("https://moodle.rwth-aachen.de")};
+               document.getElementById("rwthonline").onclick = function() {myFunction("https://online.rwth-aachen.de")};
+               document.getElementById("video").onclick = function() {myFunction("https://video.fsmpi.rwth-aachen.de")};
+
+function myFunction(link) {
+  console.log("moo");
+    //tabs.tabGroup.getActiveTab().webviewAttributes.src="https://moodle.rwth-aachen.de";
+     tabs.tabGroup.getActiveTab().webview.setAttribute("src", link);
+    tabs.tabGroup.getActiveTab().webview.classList.remove("letThrough");
+}
+
+
                //const enav = new (require('electron-navigation'))();
         </script>
 </body>

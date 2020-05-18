@@ -1,5 +1,3 @@
-// ./renderer.js
-
 // 1. Require the module
 const TabGroup = require("electron-tabs");
 
@@ -20,6 +18,7 @@ let tabGroup = new TabGroup({
         
             src: "about:blank",
     visible: true,
+        blank:true,
     // If the page needs to access Node.js modules, be sure to
     // enable the nodeintegration
     webviewAttributes: {
@@ -69,9 +68,7 @@ let tabTest = tabGroup.addTab({
         nodeintegration: true
     }
 });*/
-function letThrough (){
-    console.log("hello");
-}
-tabGroup.eachTab(letThrough);
+
+
 module.exports.tabGroup = tabGroup;
 
