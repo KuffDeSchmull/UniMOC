@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+/*import {
+  HashRouter,
+  Route
+} from "react-router-dom";//hash routing
+*/
 ReactDOM.render(
   <React.StrictMode>
     <App />

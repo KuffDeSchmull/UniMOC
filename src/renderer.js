@@ -23,11 +23,25 @@ let tabGroup = new TabGroup({
     // enable the nodeintegration
     webviewAttributes: {
         nodeintegration: true,
-        allowpopups:true
+        allowpopups:true,
+        webpreferences:"nativeWindowOpen=yes"
     }
         
         
         
+    }
+});
+
+let tabTest = tabGroup.addTab({
+    title: "Open New Tab",
+    src: "about:blank",
+    visible: true,
+    blank:true,
+    
+             webviewAttributes: {
+        nodeintegration: true,
+        allowpopups:true,
+            webpreferences:"nativeWindowOpen=yes"
     }
 });
 
@@ -38,7 +52,8 @@ let tab1 = tabGroup.addTab({
     visible: true,
         webviewAttributes: {
         nodeintegration: true,
-        allowpopups:true
+        allowpopups:true,
+            webpreferences:"nativeWindowOpen=yes"
     }
 });
 let tabOnline = tabGroup.addTab({
@@ -51,12 +66,12 @@ let tabVideo = tabGroup.addTab({
     src: "https://video.fsmpi.rwth-aachen.de",
     visible: true
 });
-let tabTest = tabGroup.addTab({
-    title: "TestG",
-    src: "about:blank",
-    visible: true,
-    blank:true
+let tabSeminare = tabGroup.addTab({
+    title: "Seminare und Praktika",
+    src: "https://supra.informatik.rwth-aachen.de/selectionState",
+    visible: true
 });
+
 // 4. Add a new tab that contains a local HTML file
 /*let tab2 = tabGroup.addTab({
     title: "Cluster",

@@ -131,8 +131,14 @@ webview.visible{
     font-family: roboto;
     margin-top: .1em;
 }
+.etabs-tab.active{
+    background-color: #272b34!important;
+    border-style:none;
+    border-radius: 0;
+}
 .etabs-tabgroup{
     margin-top: 1em;
+    user-select: none;
 }
 .etabs-buttons{
     margin-top: 1em;
@@ -160,9 +166,32 @@ webview.visible{
     background-color: rgba(50,217,121,0.8);
     color:aliceblue;
     font-size: 2em;
-    
+    user-select: none;
     font-family: roboto;
     
     
 }
+.etabs-tab-button-new:focus{
+    outline:none;
+}
 .letThrough{pointer-events:none;background-color: rgba(0,0,0,0) !important;}
+
+.render{
+
+}
+
+.noRender{
+    visibility: hidden;
+}
+#Orga{
+    position: absolute;
+}
+#Manager{
+    position: absolute;
+}
+#Bib{
+    position: absolute;
+}
+#Studies{
+    position: absolute;
+}

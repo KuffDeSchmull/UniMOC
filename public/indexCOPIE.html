@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="./node_modules/electron-tabs/electron-tabs.css">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>UniMOC</title>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+   
+  
+                        <div class = "sidebar">
+            <div class="sidebarInnerShell" style=""> 
+                <div style="margin: auto; text-align: center; margin-top: 1em;">
+                <h3 style="color: #dddd; text-align: center; font-family: roboto;">Offene Seiten</h3>
+                    </div>
+                           <div class="etabs-tabgroup">
+  <div class="etabs-tabs"></div>
+  <div class="etabs-buttons"></div>
+</div>
+            </div> 
+            <div class="pullyShell">
+                <div class = "pullyContainer"> 
+                    <div class="pully"></div>
+                </div>
+            </div> 
+        </div> 
+    
+    <div style="position: absolute; width: 100vw;">
+          <div class="grid-container" style="width:80%;margin:auto; display:grid; grid-template-columns: repeat(3, 1fr); margin-top:5em;">
+    <div style="height:7em;">
+      <div style="height:7em; padding:1em;" >
+        <div id="moodle" style="height:5em; width:5em; margin:auto; background-color:rgba(200,24,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/moodle.png); background-repeat: no-repeat;background-size: cover;"></div>
+      </div>
+    </div>
+    <div style="height:7em; ">
+      <div style="height:7em; padding:1em;" >
+        <div id="rwthonline" style="height:5em; width:5em; margin:auto; background-color:rgba(100,24,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/online.png); background-repeat: no-repeat;background-size: cover;"></div>
+      </div>
+    </div>
+    <div style="height:7em; ">
+      <div style="height:7em; padding:1em;" >
+        <div id="video" style="height:5em; width:5em; margin:auto; background-color:rgba(200,294,176,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08);background-image: url(assets/video.png);background-repeat: no-repeat;background-size: cover; "></div>
+      </div>
+    </div>
+    <div style="height:7em; ">
+      <div style="height:7em; padding:1em;" >
+        <div id="mail" style="height:5em; width:5em; margin:auto; background-color:rgba(100,204,236,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08);background-image: url(assets/mail.png);background-repeat: no-repeat;background-size: cover;"></div>
+      </div>
+    </div>
+    <div style="height:7em; ">
+      <div style="height:7em; padding:1em;" >
+        <div id="Karteikarten" style="height:5em; width:5em; margin:auto; background-color:rgba(200,204,076,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/cards.png);background-repeat: no-repeat;background-size: cover;"></div>
+      </div>
+    </div>
+    <div style="height:7em; ">
+      <div style="height:7em; padding:1em;" >
+        <div id="beer" style="height:5em; width:5em; margin:auto; background-color:rgba(200,204,076,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/beer.png);background-repeat: no-repeat;background-size: cover;"></div>
+      </div>
+    </div>
+    <div style="height:7em; ">
+      <div style="height:7em; padding:1em;" >
+        <div id="add" style="height:5em; width:5em; margin:auto; background-color:rgba(200,204,076,0.3); border-radius:1em; box-shadow: 0 -3px 20px rgba(0,0,0,0.07), 0 -4px 6px rgba(0,0,0,0.08); background-image: url(assets/plus.png);background-repeat: no-repeat;background-size: cover;"></div>
+      </div>
+    </div>
+
+  </div>
+
+    </div>
+    
+
+<div class="etabs-views"></div>
+    <div id="root"></div>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+
+    <div class="tabs" style="box-shadow: 0 -3px 20px rgba(0,0,0,0.15), 0 -4px 6px rgba(0,0,0,0.19); width:100vw; height:3em; background-color:rgba(231,231,235,1); position:fixed; bottom:0;">
+        <div class="nav-wrap" style="width:100vw; display:flex;flex-direction: row;">
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center; line-height:3em;">Manager</div>
+
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center; line-height:3em;">Organizer</div>
+            <div class="tab active" style="height:3em; background-color:; width:20%; text-align:center; line-height:3em; ">Cluster</div>
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center;  line-height:3em;">Studies</div>
+            <div class="tab" style="height:3em; background-color:; width:20%; text-align:center;  line-height:3em;">Bib</div>
+        </div>
+    </div>
+    
+    
+    
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script></script>
+           <script>
+            // You can also require other files to run in this process
+       var tabs = require('./src/renderer.js')
+       /*function letThrough (){
+    console.log("hello2");
+           let activeTab = tabs.tabGroup.getActiveTab();
+}
+tabs.tabGroup.eachTab(letThrough);*/
+               
+               document.getElementById("moodle").onclick = function() {myFunction("https://moodle.rwth-aachen.de","Moodle")};
+               document.getElementById("rwthonline").onclick = function() {myFunction("https://online.rwth-aachen.de","RWTH Online")};
+               document.getElementById("video").onclick = function() {myFunction("https://video.fsmpi.rwth-aachen.de","RWTH Video")};
+               document.getElementById("mail").onclick = function() {myFunction("https://mail.rwth-aachen.de","RWTH Mail")};
+               document.getElementById("Karteikarten").onclick = function() {myFunction(" http://rwth-aachen.tk","Karteikarten")};
+              
+
+function myFunction(link,name) {
+  console.log("moo");
+    //tabs.tabGroup.getActiveTab().webviewAttributes.src="https://moodle.rwth-aachen.de";
+    tabs.tabGroup.getActiveTab().webview.setAttribute("src", link);
+    tabs.tabGroup.getActiveTab().webview.classList.remove("letThrough");
+    tabs.tabGroup.getActiveTab().webview.classList.add("visible");
+    tabs.tabGroup.getActiveTab().setTitle(name);
+}
+
+
+               //const enav = new (require('electron-navigation'))();
+        </script>
+</body>
+
+</html>
